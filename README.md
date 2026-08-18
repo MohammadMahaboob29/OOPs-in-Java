@@ -4,16 +4,16 @@ A structured learning repository covering Object-Oriented Programming (OOPs) con
 
 ## 📚 Course Progress
 
-| Day | Topic | Status |
-|-----|-------|--------|
-| Day 1 | Class & Object | ✅ Completed |
-| Day 2 | Constructors & Constructor Chaining | ✅ Completed |
-| Day 3 | Packages & `this` Keyword | ✅ Completed |
-| Day 4 | Java Program Execution & `static` Keyword | ✅ Completed |
-| Day 5 | Inheritance | ✅ Completed |
-| Day 6 | Polymorphism | ✅ Completed |
-| Day 7 | Encapsulation & Access Modifiers | ✅ Completed |
-| Day 8 | Abstraction | ✅ Completed |
-| Day 9 | Interfaces | ✅ Completed |
-| Day 10 | Advanced Interface Concepts | ✅ Completed |
+| Day | Topic
+|-----|-------|
+| Day 1 | Class & Object 
+| Day 2 | Constructors & Constructor Chaining 
+| Day 3 | Packages & `this` Keyword
+| Day 4 | Java Program Execution & `static` Keyword
+| Day 5 | Inheritance 
+| Day 6 | Polymorphism 
+| Day 7 | Encapsulation & Access Modifiers 
+| Day 8 | Abstraction 
+| Day 9 | Interfaces 
+| Day 10 | Advanced Interface Concepts
 
