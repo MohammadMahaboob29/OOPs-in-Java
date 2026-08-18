@@ -1,0 +1,119 @@
+              Java Program Starts
+                     │
+                     ▼
+            JVM loads the class
+                     │
+                     ▼
+        Static variables initialized
+                     │
+                     ▼
+          Static blocks execute
+          (only once, in order)
+                     │
+                     ▼
+             main() executes
+                     │
+                     ▼
+      ┌──────────────────────────┐
+      │ Is a static method called?│
+      └─────────────┬────────────┘
+                    │ Yes
+                    ▼
+          Static method executes
+                    │
+                    ▼
+             Return to main()
+                    │
+                    ▼
+       Is an object being created?
+                    │
+                   Yes
+                    ▼
+        Instance variables get
+          default values
+                    │
+                    ▼
+          Instance initialization
+             / instance blocks
+                    │
+                    ▼
+            Constructor executes
+                    │
+                    ▼
+           Object is initialized
+                    │
+                    ▼
+      ┌──────────────────────────┐
+      │ Is an instance method    │
+      │ called on the object?    │
+      └─────────────┬────────────┘
+                    │ Yes
+                    ▼
+          Instance method executes
+                    │
+                    ▼
+             Return to main()
+                    │
+                    ▼
+         Create another object?
+               /          \
+             Yes           No
+              │             │
+              └───→         ▼
+                       main() ends
+                           │
+                           ▼
+                      Program ends
+
+Example :- 
+class Student {
+
+    // 1. Static variable
+    static int count = 10;
+
+    // 2. Static block
+    static {
+        System.out.println("2. Static Block");
+    }
+
+    // 3. Instance variable
+    int age = 20;
+
+    // 4. Instance block
+    {
+        System.out.println("4. Instance Block");
+    }
+
+    // 5. Constructor
+    Student() {
+        System.out.println("5. Constructor");
+    }
+
+    // 6. Static method
+    static void displayCount() {
+        System.out.println("3. Static Method");
+    }
+
+    // 7. Instance method
+    void displayAge() {
+        System.out.println("6. Instance Method");
+    }
+}
+
+class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("1. Main Method");
+
+        Student.displayCount();
+
+        Student s1 = new Student();
+        s1.displayAge();
+
+        Student s2 = new Student();
+        s2.displayAge();
+    }
+}
+
+Guess the output of the above program & the execution order of the program.

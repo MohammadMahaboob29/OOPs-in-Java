@@ -1,0 +1,51 @@
+Defination - An Object is a Instance of a class used to model realworld entities.
+
+Q) What it possess?
+    An object contains
+    1) State - Represents Properties 
+    2)Behaviour - Represents the functionality of what an object does.
+    3)Identity - a unique identifier used to make each object unique from one another.
+
+    class Student { 
+        int age;// State
+         String name; // State 
+         void study() { // Behavior 
+            System.out.println("Student is studying");
+        }
+     } 
+     class Main {
+         public static void main(String[] args) {
+             Student s1 = new Student();
+              Student s2 = new Student(); 
+              s1.age = 13; 
+              s1.name = "xx"; 
+              s2.age = 12; 
+              s2.name = "xz"; 
+            } 
+        }
+
+Q) How do we create an object?
+   Using new keyword during runtime execution of the prgm.
+
+Q) What exactly happens when we use new?
+        Internal Process of Object Creation & a Constructor call
+---------------------------------------------------------
+      Student s1 = new Student();
+
+    new Student() // new keyword used to create object in the heap memory 
+      (step 1 - JVM allocates memory for the object in the heap,
+       step 2 - Objects instance variables are assigned with default values.)
+
+        ↓
+
+    Student() constructor executes
+    (step 3 - constructor gets invoked to assign object values,
+     step 4 - Object gets initialized with its valess.)
+      
+      ↓
+
+     s1 // reference variable
+     (step 5 - s1 is a reference variable that holds a reference to the object.
+Q) What is the difference between an object and a reference?
+  Object -> contains actual data, stored in heap memory, runtime exec
+  Reference -> refers to an object , stores in stack memory. 

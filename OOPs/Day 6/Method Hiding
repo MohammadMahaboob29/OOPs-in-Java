@@ -1,0 +1,42 @@
+Q) What is method hiding?
+    Method hiding occurs when a subclass defines a 
+    static method with the same signature as a 
+    static method in its superclass.
+Example:- class Parent {
+    static void show() {
+        System.out.println("Parent");
+    }
+}
+class Child extends Parent {
+
+    static void show() {
+        System.out.println("Child");
+    }
+}
+class Main {
+
+    public static void main(String[] args) {
+
+        Parent p = new Child();
+
+        p.show();
+    }
+}---------------------
+Output
+------------------
+Parent
+
+The static method is resolved based on the reference type, which is Parent.
+
+Therefore:
+
+Parent p = new Child();
+        ↓
+Reference type = Parent
+Object type    = Child
+        ↓
+p.show()
+        ↓
+Parent.show()
+
+This is method hiding, not method overriding.

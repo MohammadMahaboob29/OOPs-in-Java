@@ -1,0 +1,25 @@
+Defination - Class is a structural representation which represents named group of properties and functions.
+
+we can create multiple objects from a single class.
+
+Q) why classes?
+  It represents structural representation and provides code reusability and promotes code organisation.
+
+Q) Can a class exists without Objects ?
+    yes, bcoz a class is just a template which represents structure,
+    it doesn't hold the actual object itself.
+
+Q) How can we access Class Members without Object?
+    we know that  members which are only related to class not objects are declared as static.
+    we know that Static members are related to class not dependent on objets.
+    There by, Static members are resolved at compile time rather than runtime.
+
+    Ex:-
+    Class Student{
+        int age;
+        String name;
+        static String School_name="SGRCS";
+    }
+    public static void main(String args[]){
+        System.out.println(Student.School_name); // here by static members are accessed by creating a single copy of var, shared by all instances of a class by class name without object creation.
+    }

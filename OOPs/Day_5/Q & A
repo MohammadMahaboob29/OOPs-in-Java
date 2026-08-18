@@ -1,0 +1,19 @@
+class Parent{
+    static void display()   
+    {
+        System.out.println("Parent class");
+    }
+}
+class Child extends Parent{
+    static void display()   
+    {
+        System.out.println("Child class");
+    }
+}
+public class Main{
+    public static void main(String[] args) {
+        Parent p=new Child();
+        p.display();
+    }
+} //here display is a static method , we know static methods are called by reference hence parent class gets printed.
+//  If we want to call child class method then we have to use child class reference.

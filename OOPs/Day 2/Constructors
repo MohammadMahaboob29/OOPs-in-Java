@@ -1,0 +1,60 @@
+      Constructors
+----------------------
+  Defination -  A Constructor is a special member of a class  used to initialize an object and it is automatically invoked when an object is created..
+ 
+ Q)why only a constructor?
+    They provide an efficient way  for initializing instance variables by passing values by invoking a constructor.
+
+Internal Process of Object Creation & a Constructor call
+---------------------------------------------------------
+      Student s1 = new Student();
+
+    new Student() // new keyword used to create object in the heap memory 
+      (step 1 - JVM allocates memory for the object in the heap,
+       step 2 - Objects instance variables are assigned with default values.)
+
+        ↓
+
+    Student() constructor executes
+    (step 3 - constructor gets invoked to assign object values,
+     step 4 - Object gets initialized with its valess.)
+      
+      ↓
+
+     s1 // reference variable
+     (step 5 - s1 store a copy of obj values as reference in stack memory.)
+
+Types of constructor
+----------------------
+
+1) Default Constructor -> when no constructor explicitly defined in the program, then when an 
+object created and calls a no parameterised constructor then java compiler internally creates a default constructor and 
+assign default values based on  type of variables.
+
+ Student() {
+    super(); // Java's compiler provides a default no-argument constructor.
+}
+
+
+2) parameterised Constructor -> A constructor that accepts parameters.
+
+Ex - class Student {
+    String name;
+    int rollno;
+
+    Student(String name, int rollno) {
+        this.name = name
+        this.rollno = rollno ;
+    }
+}
+
+class Main {
+  public static void main(String args[]){
+    Student s1 = new Student("mmb",87);
+  }
+}
+ 
+IQ) How is a No Argument constructor differ from default constructor?
+
+
+

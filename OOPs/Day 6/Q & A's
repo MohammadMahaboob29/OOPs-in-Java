@@ -1,0 +1,37 @@
+Q) Can static methods be overloaded?
+        Yes. Static methods can be overloaded.
+        Static methods can have the same name with different parameter lists.
+
+Example:- class Calculator {
+    static void add(int a, int b) {
+        System.out.println(a + b);
+    }
+    static void add(int a, int b, int c) {
+        System.out.println(a + b + c);
+    }
+}
+
+The compiler determines which static method to call based on the parameter list.
+
+Q) Can static methods be overridden?
+    No, Static methods cannot be overridden,
+    because overriding depends on objects,
+    static methods doesn't depends on objects
+    Hence, Static Methods can't be overridden.
+
+Q) Can final methods be overloaded?
+    Yes, Final methods can be overloaded.
+ it can have overloaded versions with different parameter lists.
+
+-------------------------------------------
+ NOte :-
+ ---------------------------------------------
+ Method overloading related to polymorphism,
+ method overriding related to inheritance.
+
+ final methods are resolved at compile time, 
+ hence they are related to compile-time polymorphism.
+ -> they are also known for early binding or static binding.
+
+ Dynamic Method Dispatch is late binding or runtime polymorphism, 
+    which is related to method overriding.

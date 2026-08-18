@@ -1,0 +1,37 @@
+Constructor chaining means calling one constructor from another constructor 
+so that initialization logic can be reused instead of duplicated.
+
+
+Constructor Chaining
+       │
+       ├── this()  → another constructor in the same class // constructor overloading , calling a constructor.
+       │
+       └── super() → constructor of the parent class // during inheritance 
+
+
+Ex -
+        class Student {
+
+    Student() {
+        this("MMB", 17);
+        System.out.println("No-arg constructor");
+    }
+
+    Student(String name, int age) {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+In Main -> Student s = new Student();
+ Execution Flow of Constructor Chaining
+-------------------------------
+Student()
+   ↓
+this("MMB", 17)
+   ↓
+Student(String, int)
+    ↓
+    output is : Name: MMB
+                Age: 17
+                No-arg constructor

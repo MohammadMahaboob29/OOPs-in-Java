@@ -1,0 +1,25 @@
+Super keyword is  used to immediately call the 
+parent class constructor using super().
+
+why super() is used to call the parent class constructor?
+    --> When we create an object of child class, 
+        the constructor of parent class is called first and then the constructor of child class is called.
+    --> If we don't explicitly call the parent class constructor using super() in child class constructor,
+        then the default constructor of parent class will be called automatically.
+    --> If we want to call a parameterized constructor of parent class, 
+        then we have to explicitly call it using super() with appropriate arguments.
+
+Rules for using super() in child class constructor:
+------------------------------------------------------------
+    1) super() should be the first statement in child class constructor.
+    2) If we don't call super() explicitly, then java automatically inserts a call to no-argument constructor of parent class.
+    3) We can call only one constructor of parent class using super() in child class constructor.
+
+Special Purpose of using super() in child class constructor:
+------------------------------------------------------------
+1) to call the parent class constructor from child class constructor.
+2) used as a keyword to access the parent class methods and variables from child class.
+
+super.methodname();
+super.var_name;
+
